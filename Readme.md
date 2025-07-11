@@ -15,13 +15,13 @@ Java application using the Vert.x framework to serve as a proxy for JSON-RPC 2.0
 
 3. Run docker container:
     - `docker run -p 8443:8443 proxyserver`
-    - or you can define parameters:
-    `docker run -p 8443:8443 \ `
-    `-v $(pwd)/keystore.jks:/app/keystore.jks \ `
-    `-e PROXY_PORT="8443" \ `
-    `-e ETHEREUM_NODE_URL="https://ethereum.publicnode.com" \ `
-    `-e KEYSTORE_PATH="keystore.jks" \ `
-    `-e KEYSTORE_PASSWORD="secretpassword" \ `
+    - or you can define parameters: \
+    `docker run -p 8443:8443 \ ` \
+    `-v $(pwd)/keystore.jks:/app/keystore.jks \ ` \
+    `-e PROXY_PORT="8443" \ ` \
+    `-e ETHEREUM_NODE_URL="https://ethereum.publicnode.com" \ ` \
+    `-e KEYSTORE_PATH="keystore.jks" \ ` \
+    `-e KEYSTORE_PASSWORD="secretpassword" \ ` \
     `proxyserver`
 
 
