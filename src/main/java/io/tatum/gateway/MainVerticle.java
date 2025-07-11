@@ -22,6 +22,32 @@ import io.vertx.ext.web.client.WebClient;
 import io.vertx.ext.web.client.WebClientOptions;
 import io.vertx.ext.web.handler.BodyHandler;
 
+
+/**
+ * MainVerticle is the entry point of the Ethereum JSON-RPC proxy server built on Vert.x.
+ * It configures an HTTPS server that forwards JSON-RPC requests to a specified Ethereum node,
+ * tracks method usage metrics, and exposes a monitoring endpoint.
+ *
+ * <p>
+ * Configuration parameters may be supplied via Vert.x DeploymentOptions or environment variables:
+ * <ul>
+ *   <li>{@code PROXY_PORT} – Port on which the proxy server will listen (default: 8443)</li>
+ *   <li>{@code ETHEREUM_NODE_URL} – URL of the target Ethereum node (default: https://ethereum.publicnode.com)</li>
+ *   <li>{@code KEYSTORE_PATH} – Path to the TLS keystore file (default: keystore.jks)</li>
+ *   <li>{@code KEYSTORE_PASSWORD} – Password for the keystore (default: secretpassword)</li>
+ * </ul>
+ * </p>
+ *
+ * <p>
+ * The server exposes two endpoints:
+ * <ul>
+ *   <li>{@code /rpc} – Accepts JSON-RPC payloads and forwards them to the Ethereum node</li>
+ *   <li>{@code /metrics} – Returns a JSON object with counts of method calls</li>
+ * </ul>
+ * </p>
+ *
+ * @author Lukas Adamek
+ */
 public class MainVerticle extends AbstractVerticle {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MainVerticle.class);
