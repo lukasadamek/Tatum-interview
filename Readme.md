@@ -1,6 +1,11 @@
 ### Tatum Gateway Team hiring task
 
 Java application using the Vert.x framework to serve as a proxy for JSON-RPC 2.0 requests between clients and an Ethereum blockchain node.
+- The application uses a self-signed certificate (included in keystore.jks) for a secure TLS connection.
+- Basic information about incoming requests is logged in the log file.
+- The server exposes two endpoints:
+    - /rpc: Accepts JSON-RPC payloads and forwards them to the Ethereum node</li>
+    - /metrics: Returns a JSON object with counts of method calls
 
 ##### How to run
 
