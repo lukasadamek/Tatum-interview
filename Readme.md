@@ -29,8 +29,7 @@ Java application using the Vert.x framework to serve as a proxy for JSON-RPC 2.0
 
 The application receives these optional environment variables
 
-- `PROXY_PORT`: port na kterém bude proxy naslouchat (např. 8443)
-- `ETHEREUM_NODE_URL`: URL cílového Ethereum uzlu
-- `KEYSTORE_PATH`: cesta k JKS keystore souboru
-- `KEYSTORE_PASSWORD`: keystore password
-
+- `PROXY_PORT`: Port on which the proxy will listen (e.g., 8443) 
+- `ETHEREUM_NODE_URL`: URL of the target Ethereum node 
+- `KEYSTORE_PATH`: Path to the JKS keystore file 
+- `KEYSTORE_PASSWORD`: Password for the keystore 
